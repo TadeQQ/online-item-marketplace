@@ -1,11 +1,10 @@
 ## Example online item marketplace with creating/login users, chat and adding/removing items.
 
-It is using Next, Typescript, React Hook Form, React Query, Radix and Styled Components.
+It use Next, Typescript, React Hook Form, React Query, Radix and Styled Components.
 
-## 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`]
 
 First, run the development server:
 
