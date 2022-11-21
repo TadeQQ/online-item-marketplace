@@ -3,7 +3,7 @@
 It use Next, Typescript, React Hook Form, React Query, Radix and Styled Components.
 
 
-## Getting Started
+## How to use it
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`]
 
 Run the development server:
