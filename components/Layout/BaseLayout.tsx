@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../Navbar/Navbar";
 
 interface BaseLayoutProps {
   children: React.ReactNode;
@@ -6,7 +7,8 @@ interface BaseLayoutProps {
 const BaseLayout = ({ children }: BaseLayoutProps) => {
   return (
     <>
-      <header>Navbar</header>
+      <Navbar />
+
       <div>{children}</div>
       <footer>Footer</footer>
     </>
