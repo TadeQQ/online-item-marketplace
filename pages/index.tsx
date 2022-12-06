@@ -1,7 +1,10 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import { PageWithLayout } from "../types/PageLayout";
+import { getBaseLayout } from "../components/Layout/BaseLayout";
 
-export default function Home() {
-  return <div>siema</div>;
-}
+const Home: PageWithLayout = () => {
+  return <div>SIema</div>;
+};
+
+Home.getLayout = getBaseLayout;
+
+export default Home;
