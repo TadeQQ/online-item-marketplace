@@ -6,7 +6,7 @@ const Search = () => {
   return (
     <div>
       <form>
-        <input type="text">Search</input>
+        <input type="text" placeholder="Search"></input>
         <SearchStyled.Button>
           <GoSearch />
         </SearchStyled.Button>
