@@ -8,7 +8,8 @@ const Navbar = () => {
   return (
     <NavbarStyled.Nav>
       <Logo alt="Item Marketplace" src={logo} height={90} width={350} />
-      <Link href="/">dupa</Link>
+      <Link href="/Search">Search</Link>
+      <Link href="/Login">Login</Link>
     </NavbarStyled.Nav>
   );
 };
