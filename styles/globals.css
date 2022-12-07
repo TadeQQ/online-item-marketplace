@@ -16,9 +16,10 @@ a {
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
+  /* html {
     color-scheme: dark;
-  }
+  } */
+
   body {
     color: rgb(0, 0, 0);
     background: rgb(255, 255, 255);
