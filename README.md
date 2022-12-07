@@ -1,6 +1,7 @@
 ## Example online item marketplace with creating/login users, chat and adding/removing items.
 
 It uses Next, Typescript, React Hook Form, React Query, Radix and Styled Components.
+Firebase for auth and database.
 
 
 ## How to use it
