@@ -1,4 +1,5 @@
 import React from "react";
+import { Root } from "./Baselayout.styled";
 import Navbar from "../Navbar/Navbar";
 import Search from "../Search/Search";
 import SelectCategory from "../SelectCategory/SelectCategory";
@@ -7,7 +8,7 @@ interface BaseLayoutProps {
 }
 const BaseLayout = ({ children }: BaseLayoutProps) => {
   return (
-    <>
+    <Root>
       <Navbar />
       <div>
         {
@@ -19,7 +20,7 @@ const BaseLayout = ({ children }: BaseLayoutProps) => {
 
       <div>{children}</div>
       <footer>Footer</footer>
-    </>
+    </Root>
   );
 };
 
