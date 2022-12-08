@@ -4,17 +4,15 @@ import { SearchStyled } from "./Search.styled";
 
 const Search = () => {
   return (
-    <div>
-      <SearchStyled.Form>
-        <SearchStyled.Input
-          type="text"
-          placeholder="Search for anything"
-        ></SearchStyled.Input>
-        <SearchStyled.Button>
-          <GoSearch />
-        </SearchStyled.Button>
-      </SearchStyled.Form>
-    </div>
+    <SearchStyled.Form>
+      <SearchStyled.Input
+        type="text"
+        placeholder="Search for anything"
+      ></SearchStyled.Input>
+      <SearchStyled.Button>
+        <GoSearch />
+      </SearchStyled.Button>
+    </SearchStyled.Form>
   );
 };
 

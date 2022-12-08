@@ -1,19 +1,32 @@
 import styled from "styled-components";
 
 const Form = styled.form`
-  border: 5px;
-  border-color: black;
-  border-radius: 20px;
+  border: 2px solid black;
+  border-radius: 23px;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 `;
 
 const Button = styled.button`
-  color: black;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  :hover {
+    background-color: #ebe8e8;
+  }
 `;
 
 const Input = styled.input`
   border: none;
-  font-size: 20px;
-  font-weight: 2;
+  font-size: 17px;
+  padding-right: 300px;
 `;
 export const SearchStyled = {
   Form,
