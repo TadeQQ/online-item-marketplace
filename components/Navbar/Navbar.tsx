@@ -12,13 +12,18 @@ const Navbar = () => {
     <NavbarStyled.Nav>
       <Logo alt="Item Marketplace" src={logo} height={65} width={250} />
       <Search />
-      <Link href="/Login">Sign in</Link>
-      <button>
-        <GiUsaFlag />
-      </button>
-      <Link href="/Favorites">
-        <AiOutlineHeart />
+      <Link legacyBehavior href="/Login">
+        <NavbarStyled.A>Sign in</NavbarStyled.A>
       </Link>
+      <NavbarStyled.Flag>
+        <GiUsaFlag />
+      </NavbarStyled.Flag>
+      <Link legacyBehavior href="/Favorites">
+        <NavbarStyled.Heart>
+          <AiOutlineHeart />
+        </NavbarStyled.Heart>
+      </Link>
+      Cart
     </NavbarStyled.Nav>
   );
 };
