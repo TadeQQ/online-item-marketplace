@@ -17,5 +17,3 @@ const Search = () => {
 };
 
 export default Search;
-
-//GoSearch

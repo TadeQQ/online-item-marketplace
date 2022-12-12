@@ -8,6 +8,7 @@ const Form = styled.form`
   padding-right: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
+  font-family: Optima, Helvetica, sans-serif;
 `;
 
 const Button = styled.button`
