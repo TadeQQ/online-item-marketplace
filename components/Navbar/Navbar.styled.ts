@@ -3,6 +3,8 @@ import Link from "next/link";
 const Nav = styled.nav`
   display: flex;
   gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
 `;
 const A = styled.a`
   margin-top: 22px;
