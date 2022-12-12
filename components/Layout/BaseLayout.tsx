@@ -3,6 +3,7 @@ import { Root } from "./Baselayout.styled";
 import Navbar from "../Navbar/Navbar";
 import Search from "../Search/Search";
 import SelectCategory from "../SelectCategory/SelectCategory";
+import Footer from "../Footer/Footer";
 interface BaseLayoutProps {
   children: React.ReactNode;
 }
@@ -19,7 +20,7 @@ const BaseLayout = ({ children }: BaseLayoutProps) => {
       </div>
 
       <div>{children}</div>
-      <footer>Footer</footer>
+      <Footer />
     </Root>
   );
 };
