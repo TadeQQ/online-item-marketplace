@@ -2,7 +2,7 @@ import { PageWithLayout } from "../types/PageLayout";
 import { getBaseLayout } from "../components/Layout/BaseLayout";
 
 const Home: PageWithLayout = () => {
-  return <div>SIema</div>;
+  return <div>Homepage content</div>;
 };
 
 Home.getLayout = getBaseLayout;
