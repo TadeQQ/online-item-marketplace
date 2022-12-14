@@ -1,9 +1,9 @@
-import React from "react";
-import { Root } from "./Baselayout.styled";
-import Navbar from "../Navbar/Navbar";
-import Search from "../Search/Search";
-import SelectCategory from "../SelectCategory/SelectCategory";
-import Footer from "../Footer/Footer";
+import React from 'react';
+import { Root } from './Baselayout.styled';
+import Navbar from '../Navbar/Navbar';
+import Search from '../Search/Search';
+import SelectCategory from '../SelectCategory/SelectCategory';
+import Footer from '../Footer/Footer';
 interface BaseLayoutProps {
   children: React.ReactNode;
 }
