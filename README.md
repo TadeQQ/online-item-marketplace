@@ -1,8 +1,8 @@
-## Example online item marketplace with creating/login users, chat and adding/removing items.
+# Example online item marketplace with creating/login users, chat and adding/removing items.
 
-<p>It uses Next, Typescript, React Hook Form (and resolvers), Superstruct, React-hot-toast.</p>
-<p>Radix and Styled Components for styling.</p>
-<p>Firebase for auth and database.</p>
+##<p>It uses Next, Typescript, React Hook Form (and resolvers), Superstruct, React-hot-toast.</p>
+##<p>Radix and Styled Components for styling.</p>
+##<p>Firebase for auth and database.</p>
 
 
 ## How to use it
