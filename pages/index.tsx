@@ -1,8 +1,12 @@
-import { PageWithLayout } from "../types/PageLayout";
-import { getBaseLayout } from "../components/Layout/BaseLayout";
-
+import { PageWithLayout } from '../types/PageLayout';
+import { getBaseLayout } from '../components/Layout/BaseLayout';
+import { List } from '../components/List/List';
 const Home: PageWithLayout = () => {
-  return <div>Homepage content</div>;
+  return (
+    <div>
+      <List />
+    </div>
+  );
 };
 
 Home.getLayout = getBaseLayout;
