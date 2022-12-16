@@ -1,11 +1,12 @@
-import Link from "next/link";
-import React from "react";
-import logo from "../../images/logo.png";
-import { Logo } from "./logo/Logo";
-import { NavbarStyled } from "./Navbar.styled";
-import Search from "../Search/Search";
-import { AiOutlineHeart } from "react-icons/ai";
-import { GiUsaFlag } from "react-icons/gi";
+import Link from 'next/link';
+import React from 'react';
+import logo from '../../images/logo.png';
+import { Logo } from './logo/Logo';
+import { NavbarStyled } from './Navbar.styled';
+import Search from '../Search/Search';
+import { AiOutlineHeart } from 'react-icons/ai';
+import { GiUsaFlag } from 'react-icons/gi';
+import { BsCart4 } from 'react-icons/bs';
 
 const Navbar = () => {
   return (
@@ -23,7 +24,6 @@ const Navbar = () => {
           <AiOutlineHeart />
         </NavbarStyled.Heart>
       </Link>
-      Cart
     </NavbarStyled.Nav>
   );
 };
