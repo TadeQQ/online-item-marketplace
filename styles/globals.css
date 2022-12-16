@@ -1,4 +1,4 @@
-/* html,
+html,
 body {
   padding: 0;
   margin: 0;
@@ -16,12 +16,8 @@ a {
 }
 
 @media (prefers-color-scheme: dark) {
-  /* html {
-    color-scheme: dark;
-  } */
-
-/* body {
+  body {
     color: rgb(0, 0, 0);
     background: rgb(255, 255, 255);
   }
-} */
+}
