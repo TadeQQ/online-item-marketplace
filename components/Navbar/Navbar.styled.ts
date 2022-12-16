@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Link from "next/link";
+import styled from 'styled-components';
+import Link from 'next/link';
 const Nav = styled.nav`
   display: flex;
   gap: 30px;
@@ -12,7 +12,7 @@ const A = styled.a`
   font-weight: bold;
 `;
 const Heart = styled.a`
-  margin-top: 20px;
+  margin-top: 19px;
   font-size: 24px;
   font-weight: bold;
 `;
