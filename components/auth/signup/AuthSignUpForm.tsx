@@ -25,28 +25,13 @@ export const AuthSignUpForm: React.FC = () => {
     },
   });
 
-  const renderHeader = () => {
-    return (
-      <div className="flex flex-col gap-2">
-        <h2 className="text-3xl font-bold mb-2">
-          Listic jest i zawsze będzie darmowy
-        </h2>
-        <p className="leading-relaxed">
-          Listic to platforma z ogłoszeniami, na której możesz sprzedawać oraz
-          wyszukiwać ogłoszenia z ofertami sprzedaży. Przeglądaj kategorię i
-          oferty aby znaleźć coś dla siebie!
-        </p>
-      </div>
-    );
-  };
-
   return (
     <>
       <div className="flex flex-col gap-6 mb-6">
         <h2 className="font-bold text-3xl">Utwórz konto</h2>
         <p className="leading-relaxed">
-          Wypełnij poniższy formularz i zacznij korzystać z Listic w pełni już
-          dziś!
+          Wypełnij poniższy formularz i zacznij korzystać z Online Marketplace w
+          pełni już dziś!
         </p>
       </div>
       <form className="flex flex-col gap-4" onSubmit={handleSubmit} noValidate>
