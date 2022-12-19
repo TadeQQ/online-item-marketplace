@@ -7,6 +7,7 @@ import toast from 'react-hot-toast';
 // import { AuthContainer } from '../container/AuthContainer';
 import { useSignUpForm } from './useSignUpForm';
 import { useRouter } from 'next/router';
+import { FormStyled } from './AuthSignUpForm.styled';
 
 export const AuthSignUpForm: React.FC = () => {
   const router = useRouter();
@@ -27,13 +28,13 @@ export const AuthSignUpForm: React.FC = () => {
 
   return (
     <>
-      <div className="flex flex-col gap-6 mb-6">
+      <FormStyled.Header className="flex flex-col gap-6 mb-6">
         <h2 className="font-bold text-3xl">Utwórz konto</h2>
         <p className="leading-relaxed">
           Wypełnij poniższy formularz i zacznij korzystać z Online Marketplace w
           pełni już dziś!
         </p>
-      </div>
+      </FormStyled.Header>
       <form className="flex flex-col gap-4" onSubmit={handleSubmit} noValidate>
         <div className="flex flex-col gap-4 lg:flex-row lg:gap-0">
           {/* <FormControl
