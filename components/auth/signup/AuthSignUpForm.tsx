@@ -28,7 +28,7 @@ export const AuthSignUpForm: React.FC = () => {
 
   return (
     <>
-      <FormStyled.Header className="flex flex-col gap-6 mb-6">
+      <FormStyled.Header>
         <h2 className="font-bold text-3xl">Utwórz konto</h2>
         <p className="leading-relaxed">
           Wypełnij poniższy formularz i zacznij korzystać z Online Marketplace w
