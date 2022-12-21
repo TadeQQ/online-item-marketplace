@@ -27,82 +27,104 @@ export const AuthSignUpForm: React.FC = () => {
   });
 
   return (
-    <>
-      <FormStyled.Header>
-        <h2 className="font-bold text-3xl">Utwórz konto</h2>
-        <p className="leading-relaxed">
-          Wypełnij poniższy formularz i zacznij korzystać z Online Marketplace w
-          pełni już dziś!
-        </p>
-      </FormStyled.Header>
-      <form className="flex flex-col gap-4" onSubmit={handleSubmit} noValidate>
-        <div className="flex flex-col gap-4 lg:flex-row lg:gap-0">
-          {/* <FormControl
+    <FormStyled.Container>
+      <FormStyled.Content>
+        <FormStyled.Header>
+          <h2>Utwórz konto</h2>
+          <p>
+            Wypełnij poniższy formularz i zacznij korzystać z Online Marketplace
+            w pełni już dziś!
+          </p>
+        </FormStyled.Header>
+        <FormStyled.Form onSubmit={handleSubmit} noValidate>
+          <FormStyled.Column>
+            {/* <FormControl
             isRequired
             isInvalid={!!errors.name}
             className="lg:w-1/2 lg:pr-2"
-          >
-            <FormLabel>Imię</FormLabel> */}
-          <input
-            placeholder="Podaj swoje imię"
-            autoComplete="given-name"
-            {...register('name')}
-          />
-          {/* <FormErrorMessage>Pole jest wymagane</FormErrorMessage>
+  > */}
+            <FormStyled.Label>Imię</FormStyled.Label>
+            <FormStyled.FormContent
+              placeholder="Podaj swoje imię"
+              {...register('name')}
+              required={true}
+            />
+            <FormStyled.FormBorder />
+            {/* <FormErrorMessage>Pole jest wymagane</FormErrorMessage>
           </FormControl> */}
-          {/* <FormControl
+            {/* <FormControl
             isRequired
             isInvalid={!!errors.surname}
             className="lg:w-1/2 lg:pl-2"
           >
             <FormLabel>Nazwisko</FormLabel> */}
-          <input
-            placeholder="Podaj swoje nazwisko"
-            autoComplete="family-name"
-            {...register('surname')}
-          />
-          {/* <FormErrorMessage>Pole jest wymagane</FormErrorMessage>
+            <FormStyled.Label>Nazwisko</FormStyled.Label>
+            <FormStyled.FormContent
+              placeholder="Podaj swoje nazwisko"
+              {...register('surname')}
+              required={true}
+            />
+            <FormStyled.FormBorder />
+            {/* <FormErrorMessage>Pole jest wymagane</FormErrorMessage>
           </FormControl> */}
-        </div>
-        {/* <FormControl isRequired isInvalid={!!errors.email}>
+
+            {/* <FormControl isRequired isInvalid={!!errors.email}>
           <FormLabel>Adres email</FormLabel> */}
-        <input
-          type="email"
-          autoComplete="email"
-          placeholder="Podaj swój adres email"
-          {...register('email')}
-        />
-        {/* <FormErrorMessage>Podaj poprawny adres email</FormErrorMessage>
+            <FormStyled.Label>Adres email</FormStyled.Label>
+            <FormStyled.FormContent
+              type="email"
+              placeholder="Podaj swój adres email"
+              {...register('email')}
+            />
+            {errors.email?.message}
+            <FormStyled.FormBorder />
+            {/* <FormErrorMessage>Podaj poprawny adres email</FormErrorMessage>
         </FormControl> */}
-        {/* <FormControl isRequired isInvalid={!!errors.password}>
+            {/* <FormControl isRequired isInvalid={!!errors.password}>
           <FormLabel>Hasło</FormLabel> */}
-        <input
-          type="password"
-          autoComplete="new-password"
-          placeholder="Ustaw hasło do konta"
-          {...register('password')}
-        />
-        {/* <FormErrorMessage>Hasło musi mieć minimum 6 znaków</FormErrorMessage>
+            <FormStyled.Label>Hasło</FormStyled.Label>
+            <FormStyled.FormContent
+              type="password"
+              placeholder="Ustaw hasło do konta"
+              {...register('password')}
+              required={true}
+            />
+            <FormStyled.FormBorder />
+          </FormStyled.Column>
+
+          {/* <FormErrorMessage>Hasło musi mieć minimum 6 znaków</FormErrorMessage>
         </FormControl> */}
-        {/* <FormControl isRequired isInvalid={!!errors.phone}>
+          {/* <FormControl isRequired isInvalid={!!errors.phone}>
           <FormLabel>Numer telefonu</FormLabel> */}
-        <input
-          type="tel"
-          autoComplete="tel"
-          placeholder="Podaj numer telefonu"
-          {...register('phone')}
-        />
-        {/* </FormControl> */}
-        <button type="submit" className="h-12 mt-4">
-          Utwórz konto
-        </button>
-      </form>
-      <div className="text-center mt-10 pb-4">
-        Masz już konto?{' '}
-        <Link legacyBehavior passHref href={'/'}>
-          <a className="font-bold hover:underline">Zaloguj się</a>
-        </Link>
-      </div>
-    </>
+          <FormStyled.Column>
+            <FormStyled.Label>Numer telefonu</FormStyled.Label>
+            <FormStyled.FormContent
+              type="tel"
+              placeholder="Podaj numer telefonu"
+              {...register('phone')}
+              required={true}
+            />
+            <FormStyled.FormBorder />
+
+            <div style={{ paddingTop: '10px' }}>
+              <FormStyled.FormContent type="checkbox" value="" required />
+              <FormStyled.CheckboxLabel htmlFor="invalidCheck2">
+                Agree to terms and conditions
+              </FormStyled.CheckboxLabel>
+            </div>
+            {/* </FormControl> */}
+            <FormStyled.SubmitButton type="submit">
+              {isPending ? 'ładowanie...' : 'Stwórz konto'}
+            </FormStyled.SubmitButton>
+            <FormStyled.IsAccount>
+              Masz już konto?{' '}
+              <Link legacyBehavior passHref href={'/SignIn'}>
+                <a>Zaloguj się</a>
+              </Link>
+            </FormStyled.IsAccount>
+          </FormStyled.Column>
+        </FormStyled.Form>
+      </FormStyled.Content>
+    </FormStyled.Container>
   );
 };
