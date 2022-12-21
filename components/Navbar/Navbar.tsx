@@ -13,8 +13,8 @@ const Navbar = () => {
     <NavbarStyled.Nav>
       <Logo alt="Item Marketplace" src={logo} height={65} width={250} />
       <Search />
-      <Link legacyBehavior href="/Login">
-        <NavbarStyled.A>Sign in</NavbarStyled.A>
+      <Link legacyBehavior href="/SignUp">
+        <NavbarStyled.A>Sign up</NavbarStyled.A>
       </Link>
       <NavbarStyled.Flag>
         <GiUsaFlag />
