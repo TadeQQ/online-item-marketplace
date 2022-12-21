@@ -1,5 +1,5 @@
 import { useForm } from 'react-hook-form';
-import { SignUpData, SignUpSchema } from '../../../schemas';
+import { SignInData, SignInSchema } from '../../../schemas';
 import { superstructResolver } from '@hookform/resolvers/superstruct';
 import { useCallback, useMemo, useState } from 'react';
 import { useAuth } from '../../../hooks/useAuth';
@@ -9,21 +9,21 @@ interface UseSignInFormProps {
   onError?(error: Error): void;
 }
 
-export const useSignUpForm = ({
+export const useSignInForm = ({
   onSuccess,
   onError,
 }: UseSignInFormProps = {}) => {
   const [isPending, setPending] = useState(false);
-  const { createUser } = useAuth();
-  const { handleSubmit, ...form } = useForm<SignUpData>({
-    resolver: superstructResolver(SignUpSchema),
+  const { signIn } = useAuth();
+  const { handleSubmit, ...form } = useForm<SignInData>({
+    resolver: superstructResolver(SignInSchema),
   });
 
-  const handleUserCreation = useCallback(
-    async (data: SignUpData) => {
+  const handleUserLogin = useCallback(
+    async (data: SignInData) => {
       try {
         setPending(true);
-        await createUser(data);
+        await signIn(data);
         onSuccess?.();
       } catch (error) {
         console.error(error);
@@ -32,12 +32,12 @@ export const useSignUpForm = ({
         setPending(false);
       }
     },
-    [createUser, onError, onSuccess]
+    [signIn, onError, onSuccess]
   );
 
   const handler = useMemo(
-    () => handleSubmit(handleUserCreation),
-    [handleSubmit, handleUserCreation]
+    () => handleSubmit(handleUserLogin),
+    [handleSubmit, handleUserLogin]
   );
 
   return { isPending, handleSubmit: handler, ...form };
