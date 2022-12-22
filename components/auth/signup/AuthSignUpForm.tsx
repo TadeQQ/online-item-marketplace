@@ -76,7 +76,11 @@ export const AuthSignUpForm: React.FC = () => {
               placeholder="Podaj swój adres email"
               {...register('email')}
             />
-            {errors.email?.message}
+            {
+              /* {errors.email?.message} */
+              //Zrobić stylowanie do srejestracji oraz errory, sprawdzenie loginu
+            }
+
             <FormStyled.FormBorder />
             {/* <FormErrorMessage>Podaj poprawny adres email</FormErrorMessage>
         </FormControl> */}
