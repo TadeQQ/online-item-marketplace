@@ -42,8 +42,6 @@ export const AuthSignUpForm: React.FC = () => {
             isRequired
             isInvalid={!!errors.name}
             className="lg:w-1/2 lg:pr-2"
-            test
-            test
   > */}
             <FormStyled.Label>Imię</FormStyled.Label>
             <FormStyled.FormContent
