@@ -1,10 +1,5 @@
-// import { Route } from '@listic/feature/route';
-// import { Button } from '@listic/ui/button';
-// import { FormControl, FormErrorMessage, FormLabel } from '@listic/ui/form';
-// import { Input } from '@listic/ui/input';
 import Link from 'next/link';
 import toast from 'react-hot-toast';
-// import { AuthContainer } from '../container/AuthContainer';
 import { useSignUpForm } from './useSignUpForm';
 import { useRouter } from 'next/router';
 import { FormStyled } from './AuthSignUpForm.styled';
