@@ -25,6 +25,10 @@ const useProvideAuth = () => {
   const [isProfileCreationPending, setProfileCreationPending] = useState(false);
   const [user, setUser] = useState<User | null>(null);
   const isAuthenticated = !!user;
+
+  const displayName = user?.displayName;
+  const email = user?.email;
+  const photoURL = user?.photoURL;
   const uid = user?.uid;
 
   useEffect(() => {
@@ -91,6 +95,9 @@ const useProvideAuth = () => {
 
   return {
     uid,
+    displayName,
+    email,
+    photoURL,
     user,
     isLoading,
     isAuthenticated,
