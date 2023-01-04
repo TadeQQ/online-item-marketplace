@@ -10,15 +10,22 @@ import { BsCart4 } from 'react-icons/bs';
 import { useAuth } from '../../hooks/useAuth';
 
 const Navbar = () => {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, displayName, signOut } = useAuth();
   return (
     <NavbarStyled.Nav>
-      <Logo alt="Item Marketplace" src={logo} height={65} width={250} />
+      <Link legacyBehavior href={'/'}>
+        <NavbarStyled.Logo>
+          <Logo alt="Item Marketplace" src={logo} height={65} width={250} />
+        </NavbarStyled.Logo>
+      </Link>
       <Search />
       {isAuthenticated ? (
-        <Link legacyBehavior href="/User">
-          <NavbarStyled.A>My Profile</NavbarStyled.A>
-        </Link>
+        <div>
+          <Link legacyBehavior href="/User">
+            <NavbarStyled.A>My Profile</NavbarStyled.A>
+          </Link>{' '}
+          <button onClick={() => signOut}>SignOut</button>
+        </div>
       ) : (
         <Link legacyBehavior href="/SignUp">
           <NavbarStyled.A>Sign up</NavbarStyled.A>
