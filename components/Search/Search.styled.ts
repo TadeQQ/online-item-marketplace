@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Form = styled.form`
   border: 2px solid black;
@@ -9,6 +9,7 @@ const Form = styled.form`
   margin-top: 10px;
   margin-bottom: 10px;
   font-family: Optima, Helvetica, sans-serif;
+  background-color: #f1f5f2;
 `;
 
 const Button = styled.button`
@@ -19,15 +20,13 @@ const Button = styled.button`
   font: inherit;
   cursor: pointer;
   outline: inherit;
-  :hover {
-    background-color: #ebe8e8;
-  }
 `;
 
 const Input = styled.input`
   border: none;
   font-size: 17px;
   padding-right: 300px;
+  background-color: #f1f5f2;
 `;
 export const SearchStyled = {
   Form,
