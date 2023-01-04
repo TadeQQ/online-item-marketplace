@@ -1,6 +1,6 @@
-import React from "react";
-import { GoSearch } from "react-icons/go";
-import { SearchStyled } from "./Search.styled";
+import React from 'react';
+import { GoSearch } from 'react-icons/go';
+import { SearchStyled } from './Search.styled';
 
 const Search = () => {
   return (
@@ -10,7 +10,7 @@ const Search = () => {
         placeholder="Search for anything"
       ></SearchStyled.Input>
       <SearchStyled.Button>
-        <GoSearch />
+        <GoSearch style={{ marginTop: '2px' }} />
       </SearchStyled.Button>
     </SearchStyled.Form>
   );
