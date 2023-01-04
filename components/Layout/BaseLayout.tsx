@@ -9,19 +9,21 @@ interface BaseLayoutProps {
 }
 const BaseLayout = ({ children }: BaseLayoutProps) => {
   return (
-    <Root>
-      <Navbar />
-      <div>
-        {
-          /* <SelectCategory /> */
-          // Only if window's width is small
-        }
-        <div>Category names</div>
-      </div>
+    <>
+      <Root>
+        <Navbar />
+        <div>
+          {
+            /* <SelectCategory /> */
+            // Only if window's width is small
+          }
+          <div>Category names</div>
+        </div>
 
-      <div>{children}</div>
+        <div>{children}</div>
+      </Root>
       <Footer />
-    </Root>
+    </>
   );
 };
 
