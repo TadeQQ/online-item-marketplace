@@ -8,9 +8,10 @@ import { AiOutlineHeart } from 'react-icons/ai';
 import { GiUsaFlag } from 'react-icons/gi';
 import { BsCart4 } from 'react-icons/bs';
 import { useAuth } from '../../hooks/useAuth';
+import { userAgent } from 'next/server';
 
 const Navbar = () => {
-  const { isAuthenticated, displayName, signOut } = useAuth();
+  const { isAuthenticated, displayName, signOut, user } = useAuth();
   return (
     <NavbarStyled.Nav>
       <Link legacyBehavior href={'/'}>
@@ -22,7 +23,7 @@ const Navbar = () => {
       {isAuthenticated ? (
         <>
           <Link legacyBehavior href="/User">
-            <NavbarStyled.A>{}</NavbarStyled.A>
+            <NavbarStyled.A>{user?.providerId}</NavbarStyled.A>
           </Link>{' '}
           <button onClick={() => signOut}>SignOut</button>
         </>
