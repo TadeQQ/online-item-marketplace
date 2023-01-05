@@ -20,12 +20,12 @@ const Navbar = () => {
       </Link>
       <Search />
       {isAuthenticated ? (
-        <div>
+        <>
           <Link legacyBehavior href="/User">
-            <NavbarStyled.A>My Profile</NavbarStyled.A>
+            <NavbarStyled.A>{}</NavbarStyled.A>
           </Link>{' '}
           <button onClick={() => signOut}>SignOut</button>
-        </div>
+        </>
       ) : (
         <Link legacyBehavior href="/SignUp">
           <NavbarStyled.A>Sign up</NavbarStyled.A>
