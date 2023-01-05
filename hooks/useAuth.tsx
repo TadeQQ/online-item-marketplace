@@ -1,5 +1,10 @@
 import { Collection } from '../schemas/Collections';
-import { onAuthStateChanged, User } from 'firebase/auth';
+import {
+  getAdditionalUserInfo,
+  getAuth,
+  onAuthStateChanged,
+  User,
+} from 'firebase/auth';
 import React, {
   createContext,
   useCallback,
@@ -26,7 +31,7 @@ const useProvideAuth = () => {
   const [user, setUser] = useState<User | null>(null);
   const isAuthenticated = !!user;
 
-  const displayName = user?.displayName;
+  // const displayName = user?.displayName.;
   const email = user?.email;
   const photoURL = user?.photoURL;
   const uid = user?.uid;
@@ -38,6 +43,19 @@ const useProvideAuth = () => {
     });
     return unsubscribe;
   }, []);
+
+  const auth = getAuth();
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // User is signed in, see docs for a list of available properties
+      // https://firebase.google.com/docs/reference/js/firebase.User
+      const uid = user.uid;
+      // ...
+    } else {
+      // User is signed out
+      // ...
+    }
+  });
 
   const createUser = useCallback(
     async ({ name, surname, email, password, phone }: SignUpData) => {
@@ -93,9 +111,11 @@ const useProvideAuth = () => {
     return signOut(firebaseAuth);
   }, []);
 
+  // const userDetails = getAdditionalUserInfo(uid);
+
   return {
     uid,
-    displayName,
+    // displayName,
     email,
     photoURL,
     user,
