@@ -14,10 +14,9 @@ const BaseLayout = ({ children }: BaseLayoutProps) => {
         <Navbar />
         <div>
           {
-            /* <SelectCategory /> */
+            <SelectCategory />
             // Only if window's width is small
           }
-          <div>Category names</div>
         </div>
 
         <div>{children}</div>
