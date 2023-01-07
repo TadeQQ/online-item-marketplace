@@ -16,6 +16,7 @@ const BaseLayout = ({ children }: BaseLayoutProps) => {
           {
             <SelectCategory />
             // Only if window's width is small
+            //or not
           }
         </div>
 
