@@ -15,5 +15,5 @@ const Search = () => {
     </SearchStyled.Form>
   );
 };
-//test commitów
+//test commitów 2
 export default Search;
