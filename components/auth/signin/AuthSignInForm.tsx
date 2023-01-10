@@ -24,13 +24,13 @@ export const AuthSignInForm: React.FC = () => {
   return (
     <>
       <FormStyled.Header>
-        <h2 className="font-bold text-3xl">Zaloguj się</h2>
-        <p className="leading-relaxed">
+        <h2>Zaloguj się</h2>
+        <p>
           Uzupełnij poniższy formularz danymi podanymi przy rejestacji i zacznij
           korzystać z Online Marketplace w pełni już dziś!
         </p>
       </FormStyled.Header>
-      <form className="flex flex-col gap-4" onSubmit={handleSubmit} noValidate>
+      <form onSubmit={handleSubmit} noValidate>
         {/* <FormControl isRequired isInvalid={!!errors.email}>
           <FormLabel>Adres email</FormLabel> */}
         <input
@@ -53,9 +53,7 @@ export const AuthSignInForm: React.FC = () => {
         </FormControl> */}
         {/* <FormControl isRequired isInvalid={!!errors.phone}>
           <FormLabel>Numer telefonu</FormLabel> */}
-        <button type="submit" className="h-12 mt-4">
-          Zaloguj
-        </button>
+        <button type="submit">Zaloguj</button>
       </form>
     </>
   );
